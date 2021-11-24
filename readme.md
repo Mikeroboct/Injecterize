@@ -91,7 +91,7 @@ public class StudentDao : IStudentDao
 Multiple Interfaces , define what one you want
 
 ```c#
-[Containerize(InterfaceToUse = typeof(IStudentDao))]
+[Injecterize(InterfaceToUse = typeof(IStudentDao))]
 public class StudentDao : IStudentDao , ISomeOtherInterface
    ....
     
