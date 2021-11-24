@@ -1,3 +1,6 @@
+![example workflow](https://github.com/Mikeroboct/Injecterize/actions/workflows/dotnet.yml/badge.svg)
+![nugetversion](https://img.shields.io/nuget/v/Injecterize.svg)
+
 # Injecterize .NET Core 
 ### Add Services for Dependency Injection using .NET Core
 
