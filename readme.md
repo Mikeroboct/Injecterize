@@ -25,18 +25,18 @@ Features:
 
 In your Startup class (Usually Startup.cs) : 
 ```c#
-  // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
+// This method gets called by the runtime. Use this method to add services to the container.
+public void ConfigureServices(IServiceCollection services)
+{
           
-             .....
+     .....
             
-            services.AddContainerized(new ContainerizeOptions()
-            {
-                TryRegisterWithFirstInterface = true
-            });
+     services.AddInjecterize(new InjecterizeOptions()
+     {
+         TryRegisterWithFirstInterface = true
+     });
             
-            .....
+     .....
 
 ```
 
@@ -46,7 +46,7 @@ Then in your classes you want to inject:
 ```c#
 
   
-    [Containerize]
+    [Injecterize]
     public class StudentDao : IStudentDao
     {
         private readonly string _userName;
@@ -58,7 +58,7 @@ Then in your classes you want to inject:
  And then Inject it when needed.
  
 ```c#
-   [ApiController]
+    [ApiController]
     [Route("[controller]")]
     public class StudentController : ControllerBase
     {
