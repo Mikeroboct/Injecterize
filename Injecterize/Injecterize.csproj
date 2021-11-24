@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <PackageId>Injecterize</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.0.0-rc</Version>
         <Authors>Mike Robotham</Authors>
         <PackageDescription>Add Classes to be used for Depdnency Injection using a Simple Attrbite on your classes</PackageDescription>
         <RepositoryUrl>https://github.com/Mikeroboct/Injecterize</RepositoryUrl>
