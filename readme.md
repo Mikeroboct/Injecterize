@@ -114,3 +114,5 @@ Scopes supported are
 
 
 
+Spcial thanks to Sean Covel and his vision that sparked this simple utility.
+
