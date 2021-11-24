@@ -43,31 +43,31 @@ public void ConfigureServices(IServiceCollection services)
 Then in your classes you want to inject:
 
 ```c#
-    [Injecterize]
-    public class StudentDao : IStudentDao
-    {
-        private readonly string _userName;
-        private readonly string _password;
-        private readonly string _databaseName;
+[Injecterize]
+public class StudentDao : IStudentDao
+{
+    private readonly string _userName;
+    private readonly string _password;
+    private readonly string _databaseName;
         
-        .....
+    .....
      
 ```
 
  And then Inject it when needed.
  
 ```c#
-    [ApiController]
-    [Route("[controller]")]
-    public class StudentController : ControllerBase
+[ApiController]
+[Route("[controller]")]
+public class StudentController : ControllerBase
+{
+    private readonly IStudentDao _dal;
+
+
+    public StudentController(IStudentDao studentDao)
     {
-        private readonly IStudentDao _dal;
-
-
-        public StudentController(IStudentDao studentDao)
-        {
             _dal = studentDao;
-        }
+    }
 ```
 
 #### Different Scopes
@@ -75,9 +75,9 @@ Then in your classes you want to inject:
 You can set the Scope type as part of the Attribute
 
 ```c#
-  [Injecterize(TargetScope = InstanceScope.Singleton)]
-  public class StudentDao : IStudentDao
-    ...
+[Injecterize(TargetScope = InstanceScope.Singleton)]
+public class StudentDao : IStudentDao
+   ....
 
 ```
 
@@ -87,9 +87,9 @@ You can set the Scope type as part of the Attribute
 Multiple Interfaces , define what one you want
 
 ```c#
-    [Containerize(InterfaceToUse = typeof(IStudentDao))]
-    public class StudentDao : IStudentDao , ISomeOtherInterface
-       ...
+[Containerize(InterfaceToUse = typeof(IStudentDao))]
+public class StudentDao : IStudentDao , ISomeOtherInterface
+   ....
     
 ```
 
