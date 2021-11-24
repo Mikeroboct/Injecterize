@@ -3,7 +3,6 @@
 
 ---
 
-
 Features:
 
 - **Simple Implementation** - Simple Attribute on your classes as you code.
@@ -17,9 +16,11 @@ Features:
 
 ### Getting Started
 
-``TODO``
+Package is available [Here](https://www.nuget.org/packages/Injecterize) on nuget.
 
-
+```
+Install-Package Injecterize -Version 0.0.3-rc
+```
 
 ### Usage
 
