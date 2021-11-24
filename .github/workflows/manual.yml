@@ -28,8 +28,8 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack and Publish
-      run: dotnet pack -c Relaase -o out
+      run: dotnet pack /p:Version=${{ github.event.release.tag_name }} -c Release -o out
     - name: Publish to Nuget 
-      run: dotnet nuget push /out/*.nupkg  --skip-duplicate --api-key ${{ secrets.nugetkey }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push out/*.nupkg  --skip-duplicate --api-key ${{ secrets.nugetkey }} --source https://api.nuget.org/v3/index.json
 
  
