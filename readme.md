@@ -22,7 +22,7 @@ Features:
 Package is available [Here](https://www.nuget.org/packages/Injecterize) on nuget.
 
 ```
-Install-Package Injecterize -Version 0.0.3-rc
+Install-Package Injecterize -Version 0.0.5-rc
 ```
 
 ### Usage
@@ -88,7 +88,7 @@ public class StudentDao : IStudentDao
 
 ####
 
-Multiple Interfaces , define what one you want
+Multiple Interfaces , define which one you want
 
 ```c#
 [Injecterize(InterfaceToUse = typeof(IStudentDao))]
@@ -114,5 +114,5 @@ Scopes supported are
 
 
 
-Spcial thanks to Sean Covel and his vision that sparked this simple utility.
+Special thanks to Sean Covel and his vision that sparked this simple utility.
 
