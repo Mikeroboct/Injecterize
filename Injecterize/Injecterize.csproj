@@ -5,7 +5,7 @@
         <PackageId>Injecterize</PackageId>
         <Version>1.0.0-rc</Version>
         <Authors>Mike Robotham</Authors>
-        <PackageDescription>Add Classes to be used for Depdnency Injection using a Simple Attribute on your classes</PackageDescription>
+        <PackageDescription>Add Classes to be used for Dependency Injection using a Simple Attribute on your classes</PackageDescription>
         <RepositoryUrl>https://github.com/Mikeroboct/Injecterize</RepositoryUrl>
     </PropertyGroup>
 
